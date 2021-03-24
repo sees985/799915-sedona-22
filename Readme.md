@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Ерлан Галымбек](https://up.htmlacademy.ru/adaptive/22/user/799915).
-* Наставник: `Неизвестно`.
+* Наставник: [Маргарита Попова](https://htmlacademy.ru/profile/lipsum).
 
 ---
 
