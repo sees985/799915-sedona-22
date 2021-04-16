@@ -1,16 +1,16 @@
 .reasons-item {
-  color: @basic-white;
+  color: @white;
 
   &--additional {
-    color: @basic-black;
-    background-color: @background-gray;
+    color: @black;
+    background-color: @secondary;
     padding: 30px 28px 28px 28px;
   }
 }
 
 .reasons-item__about {
   padding: 36px 16px 43px 16px;
-  background-color: @basic-blue;
+  background-color: @primary;
 }
 
 .reasons-item__title {
@@ -31,5 +31,8 @@
 .reasons-item__image-holder {
   img {
     display: block;
+    object-fit: contain;
+    width: 100%;
+    height: 260px;
   }
 }
