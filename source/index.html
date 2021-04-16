@@ -2,9 +2,12 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Городок Седона</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <div class="page__container">
@@ -35,12 +38,12 @@
           <h1 class="visually-hidden">Добро пожаловать в городок Седона!</h1>
           <img src="img/welcome.svg" width="282" height="214" alt="Текст приветствия в городок Седона на английском языке" aria-hidden="true">
         </div>
-        <section class="reasons-intro page-article">
-          <h2 class="visually-hidden">Описание городка Седона</h2>
-          <p class="page-article__title">Седона - небольшой городок в Аризоне, заслуживающий большего</p>
-          <p class="page-article__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        </section>
         <section class="reasons">
+          <section class="reasons__intro page-article">
+            <h2 class="visually-hidden">Описание городка Седона</h2>
+            <p class="page-article__title">Седона - небольшой городок в Аризоне, заслуживающий большего</p>
+            <p class="page-article__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+          </section>
           <h2 class="visually-hidden">Причины посетить наш городок</h2>
           <ol class="reasons__list">
             <li class="reasons__item">
@@ -80,15 +83,15 @@
                 <p class="reasons-item__text">Да, по нему можно пройти! Если конечно вы осмелитесь, конечно</p>
               </div>
             </li>
-            <li class="reasons__item reasons-item">
+            <li class="reasons__item reasons-item reasons-item--additional">
               <h3 class="reasons-item__title">Небольшая площадь</h3>
               <p class="reasons-item__text">Все интересные места находятся очень близко</p>
             </li>
-            <li class="reasons__item reasons-item">
+            <li class="reasons__item reasons-item reasons-item--additional">
               <h3 class="reasons-item__title">Красивая дорога</h3>
               <p class="reasons-item__text">Ехать в седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="reasons__item reasons-item">
+            <li class="reasons__item reasons-item reasons-item--additional">
               <h3 class="reasons-item__title">Мало туристов</h3>
               <p class="reasons-item__text">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
