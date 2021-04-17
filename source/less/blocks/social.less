@@ -8,16 +8,19 @@
 }
 
 .social__item {
-  background-color: @primary;
-  width: 46px;
-  height: 48px;
   margin-right: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.social__item:last-child {
-  margin-right: 0;
+.social__link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: @primary;
 }
