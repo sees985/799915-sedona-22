@@ -1,0 +1,99 @@
+.field {
+  width: 100%;
+
+  &--inline {
+    display: flex;
+
+    .field__label {
+      max-width: 72px;
+      flex-shrink: 0;
+      margin-right: 13px;
+      margin-bottom: 0;
+      align-self: center;
+    }
+
+    .field__input {
+      padding-right: 21px;
+      align-self: center;
+    }
+  }
+
+  &--textarea {
+    .field__input {
+      width: 100%;
+      min-height: 160px;
+      padding: 18px 32px 18px 19px;
+      resize: vertical;
+    }
+  }
+
+  &--icon {
+    .field__wrapper {
+      display: block;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+      }
+
+      &::before {
+        top: 0;
+        right: 0;
+        width: 58px;
+        height: 58px;
+        background-color: @gray-background;
+      }
+    }
+  }
+
+  &--phone {
+    .field__wrapper {
+      &::after {
+        top: 20px;
+        right: 19px;
+        width: 18px;
+        height: 18px;
+        background-image: url("../../img/icons/phone.svg");
+      }
+    }
+  }
+
+  &--email {
+    .field__wrapper {
+      &::after {
+        top: 23px;
+        right: 21px;
+        width: 16px;
+        height: 12px;
+        background-image: url("../../img/icons/mail.svg");
+      }
+    }
+  }
+}
+
+.field__label {
+  display: block;
+  color: @dark;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+.field__input {
+  width: 100%;
+  height: 58px;
+  padding: 18px 58px 14px 21px;
+  background-color: @light;
+  border: none;
+
+  &::placeholder {
+    font-family: @main-font;
+    color: @black;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
