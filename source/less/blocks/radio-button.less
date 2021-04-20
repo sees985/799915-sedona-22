@@ -1,8 +1,6 @@
 .radio-button {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 78px;
-  margin-bottom: 40px;
+  padding: 2px 0 2px 78px;
+  margin-bottom: 21px;
 
   &:last-child {
     margin-bottom: 0;
@@ -10,9 +8,10 @@
 }
 
 .radio-button__label {
-  display: block;
+  display: inline-block;
   align-self: center;
   position: relative;
+  padding: 18px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -25,7 +24,7 @@
   }
 
   &::before {
-    top: -10px;
+    top: 8px;
     left: -78px;
     width: 48px;
     height: 48px;
@@ -37,7 +36,7 @@
 
 .radio-button__input {
   &:checked + .radio-button__label::after {
-    top: 6px;
+    top: 22px;
     left: -63px;
     width: 18px;
     height: 18px;
