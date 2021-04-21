@@ -1,8 +1,6 @@
 .checkbox {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 78px;
-  margin-bottom: 40px;
+  padding: 2px 0 2px 78px;
+  margin-bottom: 21px;
 
   &:last-child {
     margin-bottom: 0;
@@ -10,22 +8,23 @@
 }
 
 .checkbox__label {
-  display: block;
+  display: inline-block;
   align-self: center;
   position: relative;
+  padding: 18px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
 
-  > svg {
-    display: none;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
   }
 
   &::before {
-    content: "";
-    position: absolute;
-    top: -10px;
+    top: 8px;
     left: -78px;
     width: 46px;
     height: 46px;
@@ -36,13 +35,14 @@
 }
 
 .checkbox__input {
-  &:checked + .checkbox__label > svg {
+  &:checked + .checkbox__label::after {
     display: block;
     position: absolute;
-    fill: @black;
-    top: 4px;
+    top: 22px;
     left: -66px;
     width: 23px;
     height: 17px;
+    background-image: url("../../img/icons/tick.svg");
+    background-repeat: no-repeat;
   }
 }
