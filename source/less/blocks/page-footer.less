@@ -1,10 +1,29 @@
 .page-footer {
-  outline: black solid 1px;
-  outline-offset: -1px;
   text-align: center;
   padding: 43px 84px 23px 84px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.page-footer__hashtag {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__social {
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
