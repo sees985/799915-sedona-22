@@ -26,6 +26,13 @@
   counter-increment: reason;
 
   &--primary {
+    .reasons__about {
+      @media (min-width: @tablet-width) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
       grid-column-end: 4;
@@ -33,13 +40,6 @@
       grid-row-end: 3;
       display: grid;
       grid-template-rows: min-content min-content;
-    }
-
-    .reasons__about {
-      @media (min-width: @tablet-width) {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-      }
     }
   }
 
