@@ -1,10 +1,16 @@
 .page-header {
-  padding: 17px 20px 17px 20px;
+  padding: 17px 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  outline: black solid 1px;
-  outline-offset: -1px;
+
+  @media (min-width: @tablet-width) {
+    padding: 17px 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 17px 77px 17px 66px;
+  }
 }
 
 .page-header__logo {
@@ -32,4 +38,8 @@
   background-image: url("../../img/icons/icon-menu.svg");
   background-size: 23px 22px;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

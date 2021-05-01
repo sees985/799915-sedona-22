@@ -5,8 +5,6 @@
   background-position: center;
   background-size: cover;
   padding: 60px 43px 66px 43px;
-  outline: red solid 1px;
-  outline-offset: -1px;
 
   img {
     display: block;
@@ -20,6 +18,15 @@
     img {
       width: 282px;
       height: 214px;
+
+      @media (min-width: @tablet-width) {
+        width: 461px;
+        height: 350px;
+      }
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 150px 90px;
   }
 }

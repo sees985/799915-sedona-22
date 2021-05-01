@@ -1,25 +1,100 @@
 .features__list {
-  outline: blue solid 1px;
-  outline-offset: -1px;
   list-style: none;
   margin: 0;
   padding: 40px 40px 38px 20px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    padding-top: 159px;
+    padding-bottom: 59px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .features__item {
   margin-bottom: 36px;
   padding-left: 50px;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+
+  &--house {
+    &::before {
+      background-image: url("../../img/icons/icon-house.svg");
+      width: 39px;
+      height: 37px;
+    }
+  }
+
+  &--burger {
+    &::before {
+      background-image: url("../../img/icons/icon-burger.svg");
+      width: 39px;
+      height: 37px;
+    }
+  }
+
+  &--gift {
+    &::before {
+      background-image: url("../../img/icons/icon-gift.svg");
+      width: 39px;
+      height: 37px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 35px;
+    text-align: center;
+
+    &::before {
+      top: -110px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--house {
+      &::before {
+        width: 75px;
+        height: 72px;
+      }
+    }
+
+    &--burger {
+      &::before {
+        width: 76px;
+        height: 68px;
+      }
+    }
+
+    &--gift {
+      &::before {
+        width: 64px;
+        height: 75px;
+      }
+    }
+  }
 }
 
 .features__title {
-  margin: 0;
+  margin: 0 0 24px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .features__text {
