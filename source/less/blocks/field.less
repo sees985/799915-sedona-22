@@ -28,6 +28,28 @@
   }
 
   &--phone {
+    .field__label {
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+
+    .field__label--short {
+      display: none;
+
+      @media (min-width: @desktop-width) {
+        display: block;
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+    }
+
+    .field__icon-wrapper {
+      @media (min-width: @desktop-width) {
+        min-width: 316px;
+      }
+    }
+
     .field__icon-wrapper::after {
       top: 20px;
       right: 19px;
@@ -35,15 +57,36 @@
       height: 18px;
       background-image: url("../../img/icons/phone.svg");
     }
+
+    @media (min-width: @desktop-width) {
+      justify-content: flex-start;
+    }
   }
 
   &--email {
+    .field__label {
+      @media (min-width: @desktop-width) {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+    }
+
+    .field__icon-wrapper {
+      @media (min-width: @desktop-width) {
+        min-width: 316px;
+      }
+    }
+
     .field__icon-wrapper::after {
       top: 23px;
       right: 21px;
       width: 16px;
       height: 12px;
       background-image: url("../../img/icons/mail.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-content: flex-end;
     }
   }
 }

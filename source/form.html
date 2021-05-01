@@ -43,7 +43,7 @@
             <p class="page-article__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
           <form class="review__form" method="POST" action="https://echo.htmlacademy.ru">
-            <fieldset class="review__fieldset">
+            <fieldset class="review__fieldset review__fieldset--bio">
               <legend class="review__legend">Представьтесь:</legend>
               <label class="review__field field field--inline">
                 <span class="field__label">Имя*:</span>
@@ -58,10 +58,11 @@
                 <input class="field__input" type="text" name="middle_name" placeholder="Александрович">
               </label>
             </fieldset>
-            <fieldset class="review__fieldset">
+            <fieldset class="review__fieldset review__fieldset--contacts">
               <legend class="review__legend">Контактная информация:</legend>
               <label class="review__field field field--phone">
                 <span class="field__label">Контактный телефон*:</span>
+                <span class="field__label field__label--short">Телефон*:</span>
                 <span class="field__icon-wrapper">
                   <input class="field__input" type="text" name="phone" placeholder="Введите телефон">
                 </span>
@@ -73,7 +74,7 @@
                 </span>
               </label>
             </fieldset>
-            <fieldset class="review__fieldset">
+            <fieldset class="review__fieldset review__fieldset--impression">
               <legend class="review__legend">Ваше общее впечатление:</legend>
               <label class="review__field radio-button">
                 <input class="radio-button__input visually-hidden" type="radio" name="impression" value="rather_positive" checked>
@@ -88,7 +89,7 @@
                 <span class="radio-button__label">Затрудняюсь ответить</span>
               </label>
             </fieldset>
-            <fieldset class="review__fieldset">
+            <fieldset class="review__fieldset review__fieldset--attractions">
               <legend class="review__legend">Посещенные достопримечательности:</legend>
               <label class="review__field checkbox">
                 <input class="checkbox__input visually-hidden" type="checkbox" name="attractions" value="devils_bridge" checked>
@@ -122,7 +123,10 @@
                 <textarea class="field__input" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
               </label>
             </fieldset>
-            <button class="review__submit-button button" type="submit">Отправить отзыв</button>
+            <div class="review__submit form-submit">
+              <button class="form-submit__button button" type="submit">Отправить отзыв</button>
+              <span class="form-submit__info">* - Обязательные поля</span>
+            </div>
           </form>
         </section>
       </main>
