@@ -1,0 +1,28 @@
+.form-submit {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.form-submit__button {
+  @media (min-width: @tablet-width) {
+    max-width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 480px;
+  }
+}
+
+.form-submit__info {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+
+  @media (max-width: @only-mobile-width) {
+    display: none;
+  }
+}

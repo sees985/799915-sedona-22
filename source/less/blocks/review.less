@@ -1,21 +1,102 @@
 .review__intro {
-  outline: blueviolet 1px;
-  outline-offset: -1px;
-  padding: 40px 20px 22px 20px;
+  padding: 40px 20px 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 96px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 106px 244px 18px;
+  }
 }
 
 .review__form {
-  padding: 20px 20px 48px 20px;
-  outline: blueviolet 1px;
-  outline-offset: -1px;
+  padding: 20px 20px 48px;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 60px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, min-content);
+    grid-gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 119px 48px;
+  }
 }
 
 .review__fieldset {
-  outline: blueviolet 1px;
-  outline-offset: -1px;
   margin: 0;
-  padding: 24px 0 28px 0;
+  padding: 24px 0 28px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    &--bio {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+      .review__legend {
+        text-align: left;
+      }
+    }
+
+    &--impression {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 1;
+
+      .review__legend {
+        text-align: left;
+      }
+    }
+
+    &--attractions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 10px;
+      padding: 24px 86px 28px 94px;
+
+      .review__legend {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-self: center;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--contacts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .review__legend {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-self: center;
+      }
+
+      .review__field {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+      }
+    }
+
+    &--attractions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 24px 0 28px;
+    }
+  }
 }
 
 .review__legend {
@@ -27,6 +108,10 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .review__field {
@@ -35,5 +120,12 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.review__submit {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
